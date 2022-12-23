@@ -18,19 +18,29 @@ en: &DEFAULT_EN
 
   services:
     title: "Introduction"
-    text: "简单介绍一下游戏规则"
+    desc: "Navigation in the information network is an essential part of our everyday lives. It is significant to understand how humans build the link between two words, in order to design user-friendly interactive system. <br>
+    
+    It is a general idea that: different from how a computer process the task, humans will not always choose the shortest path to reach destination. And at the first glance, one might consider that different people will link two words in various way according to their prior knowledge. <br>
+    
+    However, here we want to investigate whether there is a common and general pattern in human’s formation of the word navigating. During the way-finding procedure, do human generate fantastic ideas to finish the word to word linking? Or though people finish the task in various path, there still exist a potential pattern in human’s mind to link two topic words. <br>
+    
+    We carry out our analysis by using the dataset collecting through the human-computation game <strong>Wikispeedia</strong>. "
+    
+    desc_2: "Our main approach consists in analyzing the finished path during the game and delving into the contents in HTML pages which people scan in their navigation actions. 
+    
+    The analysis part could be divided into two primary sections: research on the potential pattern included in the finished path (internal factor) and study whether the contents in HTML pages will influence people’s way-finding between the source and destination (external factor)."
     section: services
     list:
-      - title: "research question A"
-        desc: "AAA"
-        # icon: fas fa-shopping-cart #find more at https://fontawesome.com/icons
-      - title: "RQ B"
-        desc: "BBB"
-        # icon: fas fa-laptop
+      - title: "Research Question A"
+        desc: "Is there any specific pattern change in articles' topic component, during the clicking process? For example, when navigating from ‘Zebra’ to ‘French Revolution’, there is a hypothesis that the elements of animals may decrease, and the elements of history or politics would increase through the path. Does the ‘Zebra & French Revolution‘ hypothesis mentioned above or similar phenomenon hold?"
+        icon: /assets/img/icon/wenhao.png
+      - title: "Research Question B"
+        desc: "Are there any external factors that influence people’s choice of clicking, i.e. contents on HTML pages? <br>
+        1. Do people tend to click links in an easy sentence or a professional sentence? <br>
+        2. Do people tend to click links that show up in the first a few lines of the article or links that have concentrated distribution in the webpage?"
+        icon: /assets/img/icon/wenhao.png
       # - title: "[Markdown](https://en.wikipedia.org/wiki/Markdown)"
-      - title: "RQ C"
-        desc: "CCC"
-        # icon: fab fa-markdown
+
 
   # portfolio:
   #   title: "Pattern"
@@ -38,42 +48,90 @@ en: &DEFAULT_EN
   #   section: portfolio
   #   closebutton: "Close Project"
 
-  # timeline:
-  #   title: "Timeline"
-  #   text: "Lorem ipsum timeline"
-  #   section: timeline
-  #   # left is the default
-  #   #start_align: "left"
-  #   events:
-  #     - title: "Our Humble Beginnings"
-  #       year: "2009-2011"
-  #       desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!"
-  #       image: assets/img/timeline/1.jpg
-  #       alt:
-  #     - title: "An Agency is Born"
-  #       year: "March 2011"
-  #       desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!"
-  #       image: assets/img/timeline/2.jpg
-  #       alt:
-  #     - title: "Jekyll Theme is created"
-  #       year: "2019"
-  #       desc: "Ravi Riley converted Agency, a Bootstrap-based theme, into a Jekyll theme. The Jekyll theme can be installed as a Ruby gem, or remotely. For more information, visit the documentation."
-  #       image: assets/img/timeline/3.jpg
-  #       alt: image alt text
-  #     - title: "Title"
-  #       year: "2009-2011"
-  #       desc: "Your description here, **Markdown** is fully supported."
-  #       image: assets/img/timeline/4.jpg
-  #       alt:
-  #       # you can enforce the alignment
-  #       align: right
-  #   end: "Be Part <br> of Our <br> Story!"
+  timeline:
+    title: "Timeline"
+    text: "Lorem ipsum timeline"
+    section: timeline
+    # left is the default
+    start_align: "left"
+    events:
+      - title: "Our Humble Beginnings"
+        year: "2009-2011"
+        desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!"
+        image: assets/img/timeline/1.jpg
+        alt:
+      - title: "An Agency is Born"
+        year: "March 2011"
+        desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!"
+        image: assets/img/timeline/2.jpg
+        alt:
+      - title: "Jekyll Theme is created"
+        year: "2019"
+        desc: "Ravi Riley converted Agency, a Bootstrap-based theme, into a Jekyll theme. The Jekyll theme can be installed as a Ruby gem, or remotely. For more information, visit the documentation."
+        image: assets/img/timeline/3.jpg
+        alt: image alt text
+      - title: "Title"
+        year: "2009-2011"
+        desc: "Your description here, **Markdown** is fully supported."
+        image: assets/img/timeline/4.jpg
+        alt:
+        # you can enforce the alignment
+        align: right
+    end: "Be Part <br> of Our <br> Story!"
+
+
+
+  ivan:
+    title_0: "Let's take an overview of our datasets"
+
+    body_1_0: "
+      Wikipedia is a collaborative online encyclopedia that contains articles on a wide range of topics. The articles are written and edited by volunteers, and are organized into categories to help readers find related information.
+    "
+
+    # body_1_1: "
+    # From those plots, we can see that the portion of negative attitudes is almost always higher than the portion of positive attitudes, which means most people in the world still cannot fully accept this minority group. The small \"triumph\" of positive over negative in 2020 can be a result of the lack of data in 2020. However, things are getting better. The negative proportion is decreasing while the positive proportion is increasing from 2018 to 2020.
+    # "
+
+    # title_1: "What about the speakers?"
+    
+    # body_1_2: "
+    # Now let's look more in detail into the speakers. How do speakers from different groups think about LGBTQ people? We now divide the speakers into different groups according to some specific features (age, nationality, gender, ethnic group, occupation, and religion), and study the change of their attention on this topic over the years. We calculate attention according to the frequency of people talking about this topic.
+    # "
+
+    # body_1_3: "
+    # From the plots, we can see several interesting results. When studying speakers' age, we divide the people into three groups. We find that the middle-aged group cares the most about the LGBTQ topic, and their proportion has been increasing over the years. This can be explained by the fact that most of the famous speakers who are authorities or representatives of their areas are in their midlife, it is their responsibility to pay more attention to this sensitive topic. Besides, let's focus on the ethnic group, and we find that African Americans pay the most attention to this topic, overpassing other groups a lot. This may result from the African American group's unjust treatment in the US, which makes them more concerned about social equality.
+    # "
+
+    # body_1_4: "
+    # After examining the trend of each group's attention towards the LGBTQ group, we now move on to see the change of distribution of people's attitudes toward that topic over the years. We plot the following graph for analysis, the x-axis means the feature we choose (date of birth, gender, nationality, and so on), each bar represents a kind of feature value in each group. For features with more than 10 values, we just choose the top 10 kinds. The y axis stands for the proportion of each emotion of this group.
+    
+    
+    # As is shown in the emotion distribution in different ages, we can see that most of the positive attitudes holders are young people, which is a good sign for the LGBTQ group since some of the young people will become important people in different areas and eventually make positive changes to improve the situation of the LGBTQ group. 
+    
+    
+    # In the emotion distribution among different nationalities, we can find some interesting facts: people from Israel usually have negative attitudes towards the LGBTQ community, while Ireland people tend to think in a positive way of the group. And then we focus on the top 3 countries that have the most attention, i.e. US, UK, Canada. We can find that, in the US, negative emotion is usually overpassing positive emotion. In the UK, the proportion of positive emotion has been increasing. In Canada, the negative emotion and positive emotion proportions are close.
+    
+    
+    # Some interesting facts pop out when studying the speakers' occupation. Most politicians, writers, lawyers, and journalists have negative emotions towards the LGBTQ community, while the people whose jobs are related to TV or film, like actors, singers, film producers, and so on, usually have positive attitudes toward LGBTQ.
+    
+    
+    # Finally, let's focus on the speakers' religion, especially on the Judaism and Catholic Church. We can see that the negative emotion ratio is so large in these two groups. In 2017, their negative emotion ratio is 70%, which is more than the average negative emotion ratio (46.2%).
+    # "
+
+
+
 
   about:
     title: "Finding Path: Data Story"
     text: "our story"
     body: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde. **Markdown** supported."
     section: about
+
+  conclusion:
+    title: "Conclusion"
+    # text: "our story"
+    body: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde. **Markdown** supported."
+    section: conclusion
 
 
 
@@ -123,7 +181,7 @@ en: &DEFAULT_EN
         #     icon: fab fa-facebook-f
         #   - url: https://linkedin.com
         #     icon: fab fa-linkedin-in
-  contact:
+  # contact:
     # title: "Contact Us"
     # text: "Lorem ipsum or call 123456789"
     # section: contact
@@ -138,19 +196,19 @@ en: &DEFAULT_EN
     # subject: "Contact Form Submission"
     # submit: "Send Message"
 
-  footer:
-    legal: "Privacy Policy"
-    social:
-      - url: https://twitter.com
-        icon: "fab fa-twitter"
-      - url: https://facebook.com
-        icon: "fab fa-facebook-f"
-      - url: https://linkedin.com
-        icon: "fab fa-linkedin-in"
-      - url: https://github.com/raviriley/agency-jekyll-theme
-        icon: "fab fa-github"
-      - url: https://instagram.com
-        icon: "fab fa-instagram"
+  # footer:
+  #   legal: "Privacy Policy"
+  #   social:
+  #     - url: https://twitter.com
+  #       icon: "fab fa-twitter"
+  #     - url: https://facebook.com
+  #       icon: "fab fa-facebook-f"
+  #     - url: https://linkedin.com
+  #       icon: "fab fa-linkedin-in"
+  #     - url: https://github.com/raviriley/agency-jekyll-theme
+  #       icon: "fab fa-github"
+  #     - url: https://instagram.com
+  #       icon: "fab fa-instagram"
 en-US:
   <<: *DEFAULT_EN
 en-CA:

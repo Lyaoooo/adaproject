@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/startup.js" integrity="sha512-LZZ88buOWCaSouKg9UNiW3N/vhBCprp0tpG9uNp+r6maXLDeBddAaqTmDduadI+WghoGaNlZG4NgCX0Xsxlfxg==" crossorigin="anonymous" referrerpolicy="no-referrer">$$aa$$</script>
+</head>
+
+<section class="page-section" id="{{ site.data.sitetext[site.locale].ivan.section | default: "ivan" }}">
+<!-- Big picture head -->
+<header class="masthead1">
+  <div class="container">
+    <div class="intro-text">
+      <div class="intro-heading text-uppercase">{{ site.data.sitetext[site.locale].header_ivan.text | markdownify }}</div>
+    </div>
+  </div>
+</header>
+
+<!-- 0.intro -->
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12 text-center">
+      <h3 class="section-heading text-uppercase">&nbsp</h3>
+      <h2 class="section-heading text-uppercase">{{ site.data.sitetext[site.locale].ivan.title | default: "" }}</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-10 mx-auto text-justify">
+      <div class="large text-muted">{{ site.data.sitetext[site.locale].ivan.body_0 | markdownify }}</div>
+    </div>
+  </div>
+
+<!-- 1.proportion -->
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12 text-center">
+      <h3 class="section-heading text-uppercase">&nbsp</h3>
+      <h3 class="section-heading text-uppercase">{{ site.data.sitetext[site.locale].ivan.title_0 | default: "" }}</h3>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-10 mx-auto text-justify">
+      <div class="large text-muted">{{ site.data.sitetext[site.locale].ivan.body_1_0 | markdownify }}</div>
+    </div>
+  </div>
+    <!-- button plots -->
+    <div class="container">
+    <div class="row">
+        <div class="col-lg-10 mx-auto text-center">
+        <div class="tabbable" id="tabs">
+            <ul class="nav nav-tabs nav-justified">
+            <li class="nav-item">
+                <a class="nav-link active show" href="#tab1" data-toggle="tab">Article Categories</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#tab2" data-toggle="tab">Steps Counts</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#tab3" data-toggle="tab">Step vs Rating</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#tab4" data-toggle="tab">Step vs Shortest Path</a>
+            </li>
+            </ul>
+            <div class="tab-content" width="300%">
+            <div class="tab-pane active" id="tab1">
+                <div class="col-lg-10 text-center">
+                    <iframe scrolling="no" style="border:none;" seamless="seamless" src="plotly/prepare/categories_sun.html" height="500" width="800"></iframe>
+                    </div>
+            </div>
+            <div class="tab-pane" id="tab2">
+                <div class="col-lg-10 text-center">
+                    <iframe scrolling="no" style="border:none;" seamless="seamless" src="plotly/prepare/steps_counts.html" height="500" width="800"></iframe>
+                    </div>
+            </div>
+            <div class="tab-pane" id="tab3"> 
+                <div class="col-lg-10 text-center">
+                    <iframe scrolling="no" style="border:none;" seamless="seamless" src="plotly/prepare/rating_box.html" height="500" width="800"></iframe>
+                    </div>
+            </div>
+            <div class="tab-pane" id="tab4">
+                <div class="col-lg-10 text-center">
+                    <iframe scrolling="no" style="border:none;" seamless="seamless" src="plotly/prepare/shortest_steps_strip.html" height="500" width="800"></iframe>
+                    </div>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>	  
+    </div>
+
+    <!-- fan plot -->
+    <!-- <div class="col-lg-8 mx-auto text-center">
+      <iframe scrolling="no" style="border:none;" seamless="seamless" src="plotly/ivan/emotion distribution over the world each year.html" height="600" width="120%"></iframe>
+    </div> -->
+
+    <div class="row">
+      <div class="col-lg-10 mx-auto text-justify">
+        <div class="large text-muted">{{ site.data.sitetext[site.locale].ivan.body_1_1 | markdownify }}</div>
+      </div>
+    </div>
+    <div class="row">
+    <div class="col-lg-12 text-center">
+      <h3 class="section-heading text-uppercase">&nbsp</h3>
+      <h3 class="section-heading text-uppercase">{{ site.data.sitetext[site.locale].ivan.title_1 | default: "" }}</h3>
+    </div>
+  </div>
+
+    <div class="row">
+      <div class="col-lg-10 mx-auto text-justify">
+        <div class="large text-muted">{{ site.data.sitetext[site.locale].ivan.body_1_2 | markdownify }}</div>
+      </div>
+    </div>
+
+  </div>
+  <div class="row">
+    <div class="col-lg-10 mx-auto text-justify">
+      <div class="large text-muted">{{ site.data.sitetext[site.locale].ivan.body_1_3 | markdownify }}</div>
+    </div>
+  </div>
+
+
+
+</section>
+
+</html>
+<!-- End About -->
