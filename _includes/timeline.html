@@ -105,11 +105,15 @@
       <div class="large text-muted">{{ site.data.sitetext[site.locale].timeline.a4 | markdownify }}</div>
     </div>
   </div>
+
+
   <div class="row">
     <div class="col-lg-10 mx-auto text-justify">
-      <div class="large text-muted">{{ site.data.sitetext[site.locale].timeline.q3 | markdownify }}</div>
+      <h4 class=" text-muted">{{ site.data.sitetext[site.locale].timeline.q3 | markdownify }}</h4>
     </div>
   </div>
+
+
   <div class="row">
     <div class="col-lg-10 mx-auto text-justify">
       <div class="large text-muted">{{ site.data.sitetext[site.locale].timeline.a5 | markdownify }}</div>
@@ -139,7 +143,7 @@
 
   <div class="row">
     <div class="col-lg-10 mx-auto text-justify">
-      <div class="large text-muted">{{ site.data.sitetext[site.locale].timeline.position_title | markdownify }}</div>
+      <div class="large text-muted">{{ site.data.sitetext[site.locale].timeline.position_title | default: "" }}</div>
     </div>
   </div>
 

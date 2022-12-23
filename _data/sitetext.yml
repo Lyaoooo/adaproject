@@ -74,7 +74,7 @@ We consider that there are two possible reasons to explain the phenomenon. <br>
 The first one is that people do not simply skip all contents in the HTML page and only focus on the labeled links in the webpage. The fact is that players still scan the text on the page and then select their next link to click. For those links which have a lower readability score, in other words for those paragraphs and sentences which are more difficult to figure out, people have to pay more energy and time to read it and understand the content. As a consequence, during the game playing, people are reluctant to read those sentences with lower readability score. They prefer to only concentrate on sentences that are comfortable to read. And this explanation could lead to the results in previous diagram. <br>
 The second reason is about the position of the link. As we know, every Wikipedia page follows a general structure. For instance, at the beginning, there is an abstract of whole contents on the webpage. In the next several sections, Wikipedia will introduce relevant information one by one in details according to the sequence defined in **Contents**. Therefore, we put forward a hypothesis that people tend to only read the contents at the front of the page, for instance, the abstract of the whole HTML page. And we have also calculated the readability of abstract part and the detailed information introduction after the abstract. The readability score of abstracts is averagely higher than the other parts since it does not include plenty of professional terms and explanation. <br>
 As a consequence, we will continue to study on the question whether the position of links influence people’s clicking during the game."
-    q3: "**Does the position of the links on webpage influence people’s clicking choice?**"
+    q3: "<em>Does the position of the links on webpage influence people’s clicking choice?</em>"
     a5: "We will continue our research on the position of links. Put yourself in the players’ shoes, when you do the searching, would you read the articles carefully and thoroughly from the first line to the last line, or scan the article quickly and get the key point as fast as you can? It might be natural to do it in the latter way. If so, in the Wikispeedia game, people may have a tendency to click the links that shown earlier in an article. Is it really the case? In this section, we are going to investigate whether link position plays a role when people do the navigation."
     q4: "**What is the average position over all links in the HTML page?**"
     a6: "In order to find the relationship of link position and click frequency. Let’s find the average position of the links first. <br>
@@ -124,15 +124,12 @@ Then, we iterate through all the links in the HTML files and calculate the avera
 
 
   lda:
-    title: "analyze on topics"
-
+    title_all: "analyze on topics"
     title_intro: "LDA Model"
-    
     intro: "In order to gain a deeper understanding of the paths that players took through our game, we employed a powerful tool called latent dirichlet allocation (LDA). Although we have the category of each article in the dataset, however, each article only belongs to one or two categories sharply. We use LDA model for the reason that this probabilistic model allows us to identify the distribution of topics present in a large corpus of text, and we trained it on the entire Wikispeedia plain text corpus. This allowed us to see how the topics that users were interested in changed over the course of the game, and how they moved from one topic to another. <br>
     After carefully fine-tuning the parameters, we determined that there were 16 distinct topics present in our LDA model, which is quite close to the number of topics assigned in Wikispeedia. The topics and corresponding topic words we select is shown in the **Table**. And topics are represented in the ** Intertopic Distance Map**."
-    
     body: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde. **Markdown** supported."
-    
+    section: lda
 
   conclusion:
     title: "Conclusion"
