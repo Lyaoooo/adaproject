@@ -49,7 +49,7 @@ en: &DEFAULT_EN
   #   closebutton: "Close Project"
 
   timeline:
-    title: "Analyze on Readability"
+    title: "Analyze on HTML files"
     text: "<em><strong>Does the readability of the contents on webpage influence people’s linking task?</strong></em>"
     body_0: "In this section, we will concentrate on the HTML pages. We research on whether the readability of sentences including links influence people’s clicking behavior. 
 The readability evaluation methods we use are as following:<br>
@@ -122,31 +122,35 @@ Then, we iterate through all the links in the HTML files and calculate the avera
     a_7: "From the result, we find that the path pair (North_America, United_States) always appear when the categories of the source and destination words are about science, geography and people. And people also click the United States in the North America article when the destination word belongs to IT and Technology. We consider that the selection of the article to click next is significantly impacted by the category of source and target words, however, when the category is not related to the path pair, people also click the article United States. It might could be explained by the contents that people scan during the game.<br>
           In the later analysis, we will delve deeper into the influence of HTML page towards to the frequency of path pair. In more detail, we will discuss whether the HTML contents lead to the high occurrence frequency of path pair (North_America, United_States). Does the readability lead to the result above?"
 
-  about:
-    title: "ANALYZE ON Topics"
-    # text: "our story"
+
+  lda:
+    title: "analyze on topics"
+
     title_intro: "LDA Model"
+    
     intro: "In order to gain a deeper understanding of the paths that players took through our game, we employed a powerful tool called latent dirichlet allocation (LDA). Although we have the category of each article in the dataset, however, each article only belongs to one or two categories sharply. We use LDA model for the reason that this probabilistic model allows us to identify the distribution of topics present in a large corpus of text, and we trained it on the entire Wikispeedia plain text corpus. This allowed us to see how the topics that users were interested in changed over the course of the game, and how they moved from one topic to another. <br>
-    After carefully fine-tuning the parameters, we determined that there were 16 distinct topics present in our LDA model, which is quite close to the number of topics assigned in Wikispeedia. The topics and corresponding topic words we select is shown in the **Table**. And topics are represented in the **Intertopic Distance Map**."
+    After carefully fine-tuning the parameters, we determined that there were 16 distinct topics present in our LDA model, which is quite close to the number of topics assigned in Wikispeedia. The topics and corresponding topic words we select is shown in the **Table**. And topics are represented in the ** Intertopic Distance Map**."
+    
     body: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde. **Markdown** supported."
-    section: about
+    
 
   conclusion:
     title: "Conclusion"
     # text: "our story"
-    body: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde. **Markdown** supported."
+    body: "From the above analysis, we could answer our initial title question preliminarily. During the word navigation, human is influenced by various general clicking patterns. We draw to the conclusion that people always use the geographical and national information to help them get closer to the target word. Players also tend to skip or look carelessly on sentences which are difficult to figure out. As the consequence, links in specialized or professional knowledge paragraph will not be taken into account during the navigation procedure. Besides, people are always attracted by links which lie at the front of HTML page and reluctant to scan the  lower half of the webpage. All those internal and external factors make the path finishing by human a bit inflexible and seems stereotypical.
+However, human still remains their unparalleled creativity while finding the target word from the source. In LDA analysis, though different people may possess the similar topic transition in the article selection path in parts of tasks, nevertheless, given the source and destination word, it is still impossible to predict on the topic variation between source and target. Distinct people remain their own unique ideas toward the connection of two words, even when their linking tasks are same. Those fantastic thoughts make everyone separate from others."
     section: conclusion
 
 
 
   team:
     title: "OUR AMAZING TEAM"
-    text: "Lorem ipsum dolor sit amet consectetur."
-    subtext: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde. **Markdown** supported.
+    # text: "Lorem ipsum dolor sit amet consectetur."
+    # subtext: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde. **Markdown** supported.
     section: team
     people:
-      - name: "nameA"
-        role: "roleA"
+      - name: "Haochen Su"
+        # role: "roleA"
         # image: assets/img/team/500x500.jpg
         # social:
           # - url: https://twitter.com
@@ -155,8 +159,8 @@ Then, we iterate through all the links in the HTML files and calculate the avera
           #   icon: fab fa-facebook-f
           # - url: https://linkedin.com
           #   icon: fab fa-linkedin-in
-      - name: "nameB"
-        role: "roleB"
+      - name: "Linying Yao"
+        # role: "roleB"
         # image: assets/img/team/2.jpg
         # social:
         #   - url: https://twitter.com
@@ -165,8 +169,8 @@ Then, we iterate through all the links in the HTML files and calculate the avera
         #     icon: fab fa-facebook-f
         #   - url: https://linkedin.com
         #     icon: fab fa-linkedin-in
-      - name: "nameC"
-        role: "RoleC"
+      - name: "Ruihang Jiang"
+        # role: "RoleC"
         # image: assets/img/team/500x500.jpg
         # social:
         #   - url: https://twitter.com
@@ -175,8 +179,8 @@ Then, we iterate through all the links in the HTML files and calculate the avera
         #     icon: fab fa-facebook-f
         #   - url: https://linkedin.com
         #     icon: fab fa-linkedin-in
-      - name: "Named"
-        role: "Roled"
+      - name: "Weier Liu"
+        # role: "Roled"
         # image: assets/img/team/500x500.jpg
         # social:
         #   - url: https://twitter.com

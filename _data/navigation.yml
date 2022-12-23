@@ -13,9 +13,9 @@ en: &DEFAULT_EN
   nav:
     - title: "Introduction"
       section: services
-    - title: "Topics"
-      section: about
-    - title: "Readability"
+    - title: "Topics Analysis"
+      section: lda
+    - title: "HTML Analysis"
       section: timeline
     - title: "Conclusion"
       section: conclusion
