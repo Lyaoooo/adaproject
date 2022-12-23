@@ -1,77 +1,18 @@
 <!-- About -->
-{% if site.locale and site.locale != "" and site.locale != nil %}
-  <section class="bg-light page-section" id="{{ site.data.sitetext[site.locale].timeline.section | default: "about" }}">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 text-center">
-          <h2 class="section-heading text-uppercase">{{ site.data.sitetext[site.locale].timeline.title | markdownify | default: "About" }}</h2>
-          <h3 class="section-subheading text-muted">{{ site.data.sitetext[site.locale].timeline.text | default: "timeline"}}</h3>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-12">
-          <ul class="timeline">
-      {%- assign align = site.data.sitetext[site.locale].timeline.start_align -%}
-      {%- for event in site.data.sitetext[site.locale].timeline.events -%}
-            {%- if align == "right" -%}
-              {%- if event.align and event.align == "left" -%}
-                {%- assign align = "right" -%}
-                <li>
-              {%- else -%}
-                {%- assign align = "left" %}
-                <li class="timeline-inverted">
-              {% endif %}
-            {% else %}
-              {%- if event.align and event.align == "right" -%}
-                {%- assign align = "left" -%}
-                <li class="timeline-inverted">
-              {%- else -%}
-                {%- assign align = "right" %}
-                <li>
-              {% endif %}
-            {%- endif -%}
-              <div class="timeline-image">
-                <img class="rounded-circle img-fluid" src="{{ event.image }}" alt="{{ event.alt | default: ""}}">
-              </div>
-              <div class="timeline-panel">
-                <div class="timeline-heading">
-                  <h4>{{ event.year | markdownify }}</h4>
-                  <h4 class="subheading">{{ event.title }}</h4>
-                </div>
-                <div class="timeline-body">
-                  <div class="text-muted">{{ event.desc | markdownify }}</div>
-                </div>
-              </div>
-            </li>
-		  {% endfor %}	
-            
-		  {% if site.data.sitetext[site.locale].timeline.end %}	
-			<li class="timeline-inverted">
-              <div class="timeline-image">
-                <h4>{{ site.data.sitetext[site.locale].timeline.end }}</h4>
-              </div>
-            </li>
-		  {% endif %}
-
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-{% else %}
-<section class="bg-light page-section" id="{{ site.data.sitetext.timeline.section | default: "about" }}">
+<section class="page-section" id="{{ site.data.sitetext[site.locale].timeline.section | default: "about" }}">
   <div class="container">
     <div class="row">
       <div class="col-lg-12 text-center">
-        <h2 class="section-heading text-uppercase">{{ site.data.sitetext.timeline.title | markdownify | default: "About" }}</h2>
-        <h3 class="section-subheading text-muted">{{ site.data.sitetext.timeline.text | default: "timeline"}}</h3>
+        <h2 class="section-heading text-uppercase">{{ site.data.sitetext[site.locale].timeline.title | markdownify | default: "About" }}</h2>
+        <h4 class=" text-muted">{{ site.data.sitetext[site.locale].timeline.text | default: "timeline"}}</h4>
       </div>
     </div>
     <div class="row">
       <div class="col-lg-12">
-        <ul class="timeline">
-    {%- assign align = site.data.sitetext.timeline.start_align -%}
-    {%- for event in site.data.sitetext.timeline.events -%}
+        <!-- <ul class="timeline">
+        </ul> -->
+    <!-- {%- assign align = site.data.sitetext[site.locale].timeline.start_align -%}
+    {%- for event in site.data.sitetext[site.locale].timeline.events -%}
           {%- if align == "right" -%}
             {%- if event.align and event.align == "left" -%}
               {%- assign align = "right" -%}
@@ -102,20 +43,129 @@
               </div>
             </div>
           </li>
-    {% endfor %}	
-          
-    {% if site.data.sitetext.timeline.end %}	
-    <li class="timeline-inverted">
-            <div class="timeline-image">
-              <h4>{{ site.data.sitetext.timeline.end }}</h4>
-            </div>
-          </li>
-    {% endif %}
+    {% endfor %}	 -->
+          <!-- 1.proportion -->
+<div class="container">
 
-        </ul>
+
+  <div class="row">
+    <div class="col-lg-10 mx-auto text-justify">
+      <div class="large text-muted">{{ site.data.sitetext[site.locale].timeline.body_0 | markdownify }}</div>
+    </div>
+  </div>
+
+  <div class=" col-lg-8 mx-auto text-center">
+      <iframe scrolling="no" style="border:none;" seamless="seamless" src="plotly/read/readability1.html" height="600" width="700"></iframe>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-10 mx-auto text-justify">
+      <div class="large text-muted">{{ site.data.sitetext[site.locale].timeline.body_1 | markdownify }}</div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-10 mx-auto text-justify">
+      <div class="large text-muted">{{ site.data.sitetext[site.locale].timeline.q1 | markdownify }}</div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-10 mx-auto text-justify">
+      <div class="large text-muted">{{ site.data.sitetext[site.locale].timeline.a1 | markdownify }}</div>
+    </div>
+  </div>
+
+  <div class=" col-lg-8 mx-auto text-center">
+    <iframe scrolling="no" style="border:none;" seamless="seamless" src="plotly/read/readability2.html" height="600" width="700"></iframe>
+  </div> 
+
+  <div class="row">
+    <div class="col-lg-10 mx-auto text-justify">
+      <div class="large text-muted">{{ site.data.sitetext[site.locale].timeline.a2 | markdownify }}</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-10 mx-auto text-justify">
+      <div class="large text-muted">{{ site.data.sitetext[site.locale].timeline.q2 | markdownify }}</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-10 mx-auto text-justify">
+      <div class="large text-muted">{{ site.data.sitetext[site.locale].timeline.a3 | markdownify }}</div>
+    </div>
+  </div>
+
+  <div class=" col-lg-8 mx-auto text-center">
+    <iframe scrolling="no" style="border:none;" seamless="seamless" src="plotly/read/readability3.html" height="450" width="700"></iframe>
+  </div> 
+
+  <div class="row">
+    <div class="col-lg-10 mx-auto text-justify">
+      <div class="large text-muted">{{ site.data.sitetext[site.locale].timeline.a4 | markdownify }}</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-10 mx-auto text-justify">
+      <div class="large text-muted">{{ site.data.sitetext[site.locale].timeline.q3 | markdownify }}</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-10 mx-auto text-justify">
+      <div class="large text-muted">{{ site.data.sitetext[site.locale].timeline.a5 | markdownify }}</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-10 mx-auto text-justify">
+      <div class="large text-muted">{{ site.data.sitetext[site.locale].timeline.q4 | markdownify }}</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-10 mx-auto text-justify">
+      <div class="large text-muted">{{ site.data.sitetext[site.locale].timeline.a6 | markdownify }}</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-10 mx-auto text-justify">
+      <div class="large text-muted">{{ site.data.sitetext[site.locale].timeline.q5 | markdownify }}</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-10 mx-auto text-justify">
+      <div class="large text-muted">{{ site.data.sitetext[site.locale].timeline.a7 | markdownify }}</div>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-lg-12 text-center">
+      <h3 class="section-heading text-uppercase">&nbsp</h3>
+      <h3 class="section-heading text-uppercase">{{ site.data.sitetext[site.locale].timeline.position_title | default: "" }}</h3>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-10 mx-auto text-justify">
+      <div class="large text-muted">{{ site.data.sitetext[site.locale].timeline.pq1 | markdownify }}</div>
+    </div>
+  </div>
+
+  <div class=" col-lg-8 mx-auto text-center">
+    <iframe scrolling="no" style="border:none;" seamless="seamless" src="plotly/pos/position1.html" height="600" width="700"></iframe>
+  </div> 
+  <div class="row">
+    <div class="col-lg-10 mx-auto text-justify">
+      <div class="large text-muted">{{ site.data.sitetext[site.locale].timeline.pa1 | markdownify }}</div>
+    </div>
+  </div>
+
+
+
+</div>
+
+
       </div>
     </div>
   </div>
 </section>
-{% endif %}
 <!-- End About -->
