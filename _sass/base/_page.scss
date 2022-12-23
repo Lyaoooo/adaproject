@@ -29,6 +29,16 @@ h6 {
   @include heading-font;
 }
 
+.smaller {
+  transform: scale(0.7);
+  overflow: hidden;
+}
+
+.adaptive-size {
+  width: 50vw;
+  height: 75vh;
+}
+
 .page-section {
   padding: 100px 0;
   h2.section-heading {
@@ -70,3 +80,4 @@ img::selection {
 img::-moz-selection {
   background: transparent;
 }
+

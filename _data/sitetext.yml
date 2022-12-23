@@ -85,41 +85,26 @@ en: &DEFAULT_EN
     title_0: "Let's take an overview of our datasets"
 
     body_1_0: "
-      Wikipedia is a collaborative online encyclopedia that contains articles on a wide range of topics. The articles are written and edited by volunteers, and are organized into categories to help readers find related information.
-    "
-
-    # body_1_1: "
-    # From those plots, we can see that the portion of negative attitudes is almost always higher than the portion of positive attitudes, which means most people in the world still cannot fully accept this minority group. The small \"triumph\" of positive over negative in 2020 can be a result of the lack of data in 2020. However, things are getting better. The negative proportion is decreasing while the positive proportion is increasing from 2018 to 2020.
-    # "
-
-    # title_1: "What about the speakers?"
+      Wikipedia is a collaborative online encyclopedia that contains articles on a wide range of topics. The articles are written and edited by volunteers, and are organized into categories to help readers find related information."
+    title_1: "Basic Analysis on the common pattern of navigation paths"
+    q_1: "**What path do people like to follow? Which category of articles do people tend to select?**"
+    a_1: "We begin our investigation by counting the basic statistical results from the dataset. We focus on the finished path and try to find whether there is an article selection tendency in people’s playing procedure. The section will be divided into two parts. In the first part, we will investigate which kind of article do people select in their first step. In the second part, we study on the finished path in details. We introduce the term **path pair** and carry out the statistical analysis on which path pair do people often choose."
+    q_2: "**Which kind of articles do people select in their first step?**"
+    a_2: "In the dataset, each article has its own belonging category, and the category is in hierarchical form with the deepest depth reaches 3rd layer. For example, the word **Albatross** belongs to category “subject.Science.Biology.Birds”. 
     
-    # body_1_2: "
-    # Now let's look more in detail into the speakers. How do speakers from different groups think about LGBTQ people? We now divide the speakers into different groups according to some specific features (age, nationality, gender, ethnic group, occupation, and religion), and study the change of their attention on this topic over the years. We calculate attention according to the frequency of people talking about this topic.
-    # "
-
-    # body_1_3: "
-    # From the plots, we can see several interesting results. When studying speakers' age, we divide the people into three groups. We find that the middle-aged group cares the most about the LGBTQ topic, and their proportion has been increasing over the years. This can be explained by the fact that most of the famous speakers who are authorities or representatives of their areas are in their midlife, it is their responsibility to pay more attention to this sensitive topic. Besides, let's focus on the ethnic group, and we find that African Americans pay the most attention to this topic, overpassing other groups a lot. This may result from the African American group's unjust treatment in the US, which makes them more concerned about social equality.
-    # "
-
-    # body_1_4: "
-    # After examining the trend of each group's attention towards the LGBTQ group, we now move on to see the change of distribution of people's attitudes toward that topic over the years. We plot the following graph for analysis, the x-axis means the feature we choose (date of birth, gender, nationality, and so on), each bar represents a kind of feature value in each group. For features with more than 10 values, we just choose the top 10 kinds. The y axis stands for the proportion of each emotion of this group.
+    For simplicity, we only use the second layer as their category in our analysis. Therefore, there are 15 article categories in total in the dataset. When it comes to the finished path, we remove the path with the length equals to 0 which means that the source and the destination words is the same or the destination word directly shows in the source article. 
     
+    In this situation, it is hard for us to distinguish whether the player finish the navigation tasks by lucky or not.<br>
+    After the pre-processing above, we count all the category of the first article that people choose. The result is shown as below:"
+    a_3: "Besides counting the number of clicking on the first articles, we also include the number of articles in each category in the picture. We consider that the article number in one category will also influence people’s clicking behavior and the normalization is necessary. For example, the clicking on articles belongs to Science is 13672 times while the amount of articles in this category is also large (1122 articles). As a consequence, we calculate the ratio of each category and draw the statistical diagram again."
+    a_4: "From the above results, we draw to the conclusion that people tend to select articles belong to category **Countries** and **Geography** in their first step. The ratio is far larger than the other categories. We speculate the reason is that people are more familiar with the **Countries** and **Geography** information of the target words. It is a general approach of getting closer to the destination via moving to articles that have similar geographic location and country information. Take the word “panda” for instance. When people are required to navigate to this target, people should first click to articles that include China or Asia elements. Hence, the **Countries** and **Geography** information could help people step closer to their target quickly which leads to the high ratio results of category **Countries** and **Geography** in the above diagram. And this is a possible linking pattern exist in the game."
     
-    # As is shown in the emotion distribution in different ages, we can see that most of the positive attitudes holders are young people, which is a good sign for the LGBTQ group since some of the young people will become important people in different areas and eventually make positive changes to improve the situation of the LGBTQ group. 
-    
-    
-    # In the emotion distribution among different nationalities, we can find some interesting facts: people from Israel usually have negative attitudes towards the LGBTQ community, while Ireland people tend to think in a positive way of the group. And then we focus on the top 3 countries that have the most attention, i.e. US, UK, Canada. We can find that, in the US, negative emotion is usually overpassing positive emotion. In the UK, the proportion of positive emotion has been increasing. In Canada, the negative emotion and positive emotion proportions are close.
-    
-    
-    # Some interesting facts pop out when studying the speakers' occupation. Most politicians, writers, lawyers, and journalists have negative emotions towards the LGBTQ community, while the people whose jobs are related to TV or film, like actors, singers, film producers, and so on, usually have positive attitudes toward LGBTQ.
-    
-    
-    # Finally, let's focus on the speakers' religion, especially on the Judaism and Catholic Church. We can see that the negative emotion ratio is so large in these two groups. In 2017, their negative emotion ratio is 70%, which is more than the average negative emotion ratio (46.2%).
-    # "
-
-
-
+    q_3: "**Which path pair occurs the highest times in all paths?**"
+    a_5: "Then, we count the number of path pair in the finished path. We will first give the definition of path pair. Assuming there is a finished path A->B->C->D, then the path pair of it is (A,B), (B,C) and (C,D). Considering that the last three path pairs will be influenced by the distribution of target word in all games significantly, we will remove the last three path pairs. The result is shown below:"
+    a_6: "From the above results, we find that the path pair (Brain, Computer_science), (Asteroid, Earth), (North_America, United_States), (Europe, United_Kingdom) and (United_States, North_America) are the top 5 path pairs that occur. Most of these five path pairs include the information of geography and countries. It seems that this result strengthened our conclusion in the first part of this section: People tends to use the geographic location and nationality to find the target words. <br>
+          Then, take the path pair (North_America, United_States) for example. We would like to find in which source and target categories do people tend to generate this path pair. The outcome is as following:"
+    a_7: "From the result, we find that the path pair (North_America, United_States) always appear when the categories of the source and destination words are about science, geography and people. And people also click the United States in the North America article when the destination word belongs to IT and Technology. We consider that the selection of the article to click next is significantly impacted by the category of source and target words, however, when the category is not related to the path pair, people also click the article United States. It might could be explained by the contents that people scan during the game.<br>
+          In the later analysis, we will delve deeper into the influence of HTML page towards to the frequency of path pair. In more detail, we will discuss whether the HTML contents lead to the high occurrence frequency of path pair (North_America, United_States). Does the readability lead to the result above?"
 
   about:
     title: "Finding Path: Data Story"
