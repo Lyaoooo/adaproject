@@ -38,7 +38,7 @@ en: &DEFAULT_EN
         desc: "Are there any external factors that influence people’s choice of clicking, i.e. contents on HTML pages? <br>
         1. Do people tend to click links in an easy sentence or a professional sentence? <br>
         2. Do people tend to click links that show up in the first a few lines of the article or links that have concentrated distribution in the webpage?"
-        icon: ../assets/img/icon/wenhao.png
+        icon: assets/img/icon/wenhao.png
       # - title: "[Markdown](https://en.wikipedia.org/wiki/Markdown)"
 
 
