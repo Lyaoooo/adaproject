@@ -33,12 +33,12 @@ en: &DEFAULT_EN
     list:
       - title: "Research Question A"
         desc: "Is there any specific pattern change in articles' topic component, during the clicking process? For example, when navigating from ‘Zebra’ to ‘French Revolution’, there is a hypothesis that the elements of animals may decrease, and the elements of history or politics would increase through the path. Does the ‘Zebra & French Revolution‘ hypothesis mentioned above or similar phenomenon hold?"
-        icon: /assets/img/icon/wenhao.png
+        icon: assets/img/icon/wenhao.png
       - title: "Research Question B"
         desc: "Are there any external factors that influence people’s choice of clicking, i.e. contents on HTML pages? <br>
         1. Do people tend to click links in an easy sentence or a professional sentence? <br>
         2. Do people tend to click links that show up in the first a few lines of the article or links that have concentrated distribution in the webpage?"
-        icon: /assets/img/icon/wenhao.png
+        icon: ../assets/img/icon/wenhao.png
       # - title: "[Markdown](https://en.wikipedia.org/wiki/Markdown)"
 
 
@@ -127,7 +127,7 @@ Then, we iterate through all the links in the HTML files and calculate the avera
     title_all: "analyze on topics"
     title_intro: "LDA Model"
     intro: "In order to gain a deeper understanding of the paths that players took through our game, we employed a powerful tool called latent dirichlet allocation (LDA). Although we have the category of each article in the dataset, however, each article only belongs to one or two categories sharply. We use LDA model for the reason that this probabilistic model allows us to identify the distribution of topics present in a large corpus of text, and we trained it on the entire Wikispeedia plain text corpus. This allowed us to see how the topics that users were interested in changed over the course of the game, and how they moved from one topic to another. <br>
-    After carefully fine-tuning the parameters, we determined that there were 16 distinct topics present in our LDA model, which is quite close to the number of topics assigned in Wikispeedia. The topics and corresponding topic words we select is shown in the **Table**. And topics are represented in the ** Intertopic Distance Map**."
+    After carefully fine-tuning the parameters, we determined that there were 16 distinct topics present in our LDA model, which is quite close to the number of topics assigned in Wikispeedia. The topics and corresponding topic words we select is shown in the **Table**. And topics are represented in the **Intertopic Distance Map**."
     body: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde. **Markdown** supported."
     section: lda
 
